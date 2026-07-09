@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.0",
+  "zweck": "Kompakte Übersicht der Kompetenzbereiche und Kompetenzschwerpunkte je Fach, Lehrplanbasis und Klassenstufe. Detaillierte Teilkompetenzen sind in den jeweiligen Klassen-Dateien dokumentiert.",
+  "bundesland": "Sachsen-Anhalt",
+  "schulform": "Gemeinschaftsschule",
+  "faecher": ["Deutsch", "Evangelische Religion"],
+  "hinweis": "Nur Kompetenzen, die direkt aus den bereitgestellten Lehrplänen extrahiert wurden. Operatoren, Bewertungsmaßstäbe und Prüfungsformate sind separat in den jeweiligen Klassen-Dateien dokumentiert oder im bereitgestellten Lehrplan nicht ausgewiesen.",
+  "matrizen": {
+    "Deutsch": {
+      "Sekundarschule": {
+        "quelle": "lp_sks_deutsch_01_08_2019_k2.pdf (+ Fachliche_Orientierung_Deutsch.pdf)",
+        "jahrgang_struktur": "5/6, 7/8, 9, 9/10 (Doppeljahrgänge bzw. Einzeljahrgang)",
+        "kompetenzbereiche": [
+          "Sprache und Sprachgebrauch untersuchen",
+          "Sprechen, Zuhören und Schreiben",
+          "Lesen – mit Texten umgehen",
+          "Mit Medien umgehen"
+        ],
+        "zentrale_kompetenz": "Sprachhandlungskompetenz",
+        "klassen": {
+          "5": {"doppeljahrgang": "5/6", "kompetenzbereiche_referenz": "data/curriculum/deutsch/sekundarschule/klasse_05.md"},
+          "6": {"doppeljahrgang": "5/6", "kompetenzbereiche_referenz": "data/curriculum/deutsch/sekundarschule/klasse_06.md"},
+          "7": {"doppeljahrgang": "7/8", "kompetenzbereiche_referenz": "data/curriculum/deutsch/sekundarschule/klasse_07.md"},
+          "8": {"doppeljahrgang": "7/8", "kompetenzbereiche_referenz": "data/curriculum/deutsch/sekundarschule/klasse_08.md"},
+          "9": {"doppeljahrgang": "9 (einzeln) bzw. 9/10", "kompetenzbereiche_referenz": "data/curriculum/deutsch/sekundarschule/klasse_09.md"},
+          "10": {"doppeljahrgang": "9/10", "kompetenzbereiche_referenz": "data/curriculum/deutsch/sekundarschule/klasse_10.md"}
+        }
+      },
+      "Gymnasium": {
+        "quelle": "FLP_Deutsch_Gym_swd.pdf",
+        "jahrgang_struktur": "5/6, 7/8, 9 (einzeln), 10 (Einführungsphase), 11/12 (Qualifikationsphase)",
+        "kompetenzbereiche": [
+          "Sprechen und Zuhören",
+          "Schreiben",
+          "Lesen",
+          "Sich mit Texten und Medien auseinandersetzen",
+          "Sprache und Sprachgebrauch reflektieren"
+        ],
+        "anforderungsniveaus_qualifikationsphase": ["grundlegend (gAN)", "erhöht (eAN)"],
+        "klassen": {
+          "9": {"phase": "Sekundarstufe I", "kompetenzbereiche_referenz": "data/curriculum/deutsch/gymnasium/klasse_09.md"},
+          "10": {"phase": "Einführungsphase", "kompetenzbereiche_referenz": "data/curriculum/deutsch/gymnasium/klasse_10.md"},
+          "11": {"phase": "Qualifikationsphase 11/12", "kompetenzbereiche_referenz": "data/curriculum/deutsch/gymnasium/klasse_11.md"},
+          "12": {"phase": "Qualifikationsphase 11/12", "kompetenzbereiche_referenz": "data/curriculum/deutsch/gymnasium/klasse_12.md", "hinweis": "verweist auf klasse_11.md (Lehrplan trennt 11/12 nicht)"}
+        }
+      }
+    },
+    "Evangelische Religion": {
+      "Sekundarschule": {
+        "quelle": "lp_sks_evrel_01_08_2019.pdf",
+        "jahrgang_struktur": "5/6, 7/8, 9/10 (Doppeljahrgänge)",
+        "kompetenzbereiche": [
+          "Wahrnehmung und Darstellung",
+          "Deutung",
+          "Beurteilung",
+          "Kommunikation und Dialog",
+          "Gestaltung"
+        ],
+        "kompetenzschwerpunkte_pro_klasse": {
+          "5": ["Anthropologie: Freundschaft", "Theologie: Biblische Gottesbilder und Fragen an Gott", "Christologie: Die Reich-Gottes-Hoffnung zur Zeit Jesu", "Ethik: Alltagskonflikte", "Kirchengeschichte/Ekklesiologie: Die Anfänge der christlichen Kirche", "Eschatologie: Hoffnung lernen — Propheten erzählen vom neuen Leben"],
+          "6": ["Anthropologie: Freundschaft", "Theologie: Biblische Gottesbilder und Fragen an Gott", "Christologie: Die Reich-Gottes-Hoffnung zur Zeit Jesu", "Ethik: Alltagskonflikte", "Kirchengeschichte/Ekklesiologie: Die Anfänge der christlichen Kirche", "Eschatologie: Hoffnung lernen — Propheten erzählen vom neuen Leben"],
+          "7": ["Anthropologie: Partnerschaft", "Theologie: Monotheistische Gottesvorstellungen", "Christologie: Jesu Wirken und seine Botschaft in Lebensgeschichten", "Ethik: Konsequenzen persönlichen Handelns aus der Perspektive des christlichen Glaubens", "Eschatologie: Hoffnung über den Tod hinaus — Über Sterben und Tod nachdenken"],
+          "8": ["Anthropologie: Partnerschaft", "Theologie: Monotheistische Gottesvorstellungen", "Christologie: Jesu Wirken und seine Botschaft in Lebensgeschichten", "Ethik: Konsequenzen persönlichen Handelns aus der Perspektive des christlichen Glaubens", "Eschatologie: Hoffnung über den Tod hinaus — Über Sterben und Tod nachdenken"],
+          "9": ["Anthropologie: Menschenwürde und Religion", "Theologie: Gottesvorstellungen im Kontext religiöser Pluralität", "Christologie: Leiden, Tod und Auferstehung Jesu", "Ethik: Verantwortung", "Eschatologie: Wahre Hoffnung oder Ware Hoffnung?"],
+          "10": ["Anthropologie: Menschenwürde und Religion", "Theologie: Gottesvorstellungen im Kontext religiöser Pluralität", "Christologie: Leiden, Tod und Auferstehung Jesu", "Ethik: Verantwortung", "Eschatologie: Wahre Hoffnung oder Ware Hoffnung?"]
+        }
+      },
+      "Gymnasium": {
+        "quelle": "FLP_EvangRU_Gym_01082022_swd.pdf",
+        "jahrgang_struktur": "5/6, 7/8, 9 (einzeln), 10 (Einführungsphase), 11/12 (Qualifikationsphase)",
+        "kompetenzbereiche": [
+          "Wahrnehmung und Darstellung",
+          "Deutung",
+          "Beurteilung",
+          "Kommunikation und Dialog",
+          "Gestaltung"
+        ],
+        "kompetenzschwerpunkte_pro_klasse": {
+          "9": [
+            "Anthropologie: Vielfalt aus Sicht des christlichen Menschenbildes beurteilen",
+            "Christologie: Perspektiven auf Jesus reflektieren",
+            "Theologie: Sich im Kontext religiöser und weltanschaulicher Pluralität mit der Frage nach Gott auseinandersetzen",
+            "Ethik: Aus jüdisch-christlicher Perspektive Verantwortung für das Leben begründen",
+            "Ekklesiologie: Kirche in der Moderne wahrnehmen",
+            "Eschatologie: Todesdeutungen im Horizont von Lebensentwürfen erörtern"
+          ],
+          "10": [
+            "Ethik: Sich zu ethischen Herausforderungen in einer globalen Welt positionieren",
+            "Eschatologie: Hoffnung als zentrale Gestaltungskategorie des demokratischen Gemeinwesens beurteilen"
+          ],
+          "11": [
+            "Anthropologie: Eine begründete Vorstellung vom Menschsein entwickeln",
+            "Christologie: Die frohe Botschaft als gesellschaftliche Herausforderung beurteilen",
+            "Theologie: Perspektiven für die Gottesfrage in der Gegenwart entwickeln",
+            "Ekklesiologie: Die Stellung von Kirche im Kontext konkurrierender Deutungen diskutieren"
+          ],
+          "12": [
+            "Anthropologie: Eine begründete Vorstellung vom Menschsein entwickeln",
+            "Christologie: Die frohe Botschaft als gesellschaftliche Herausforderung beurteilen",
+            "Theologie: Perspektiven für die Gottesfrage in der Gegenwart entwickeln",
+            "Ekklesiologie: Die Stellung von Kirche im Kontext konkurrierender Deutungen diskutieren"
+          ]
+        }
+      }
+    }
+  },
+  "gemeinschaftsschule_anwendung": {
+    "regel": "Klasse 5–8 nutzen die Kompetenzbereiche der Sekundarschule; Klasse 9–10 je nach Bildungsgang (Sekundarschule oder Gymnasium); Klasse 11–12 nutzen die Kompetenzbereiche des Gymnasiums (Qualifikationsphase).",
+    "routing_referenz": "data/curriculum/routing_rules.json"
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0",
+  "bundesland": "Sachsen-Anhalt",
+  "schulform": "Gemeinschaftsschule",
+  "faecher": ["Deutsch", "Evangelische Religion"],
+  "hinweis_faecher": "Nur Evangelischer Religionsunterricht ist hinterlegt. Katholischer RU und Ethik sind nicht Bestandteil des Skills und werden mit Hinweis abgelehnt.",
+  "klassenstufen": ["5", "6", "7", "8", "9", "10", "11", "12"],
+  "lehrplanbasen": ["Sekundarschule", "Gymnasium", "kombiniert", "unklar"],
+  "curricula": {
+    "Deutsch": {
+      "Sekundarschule": {
+        "quelle_pdf": "input/lehrplaene/sekundarschule/deutsch/lp_sks_deutsch_01_08_2019_k2.pdf",
+        "ergaenzung_pdf": "input/lehrplaene/sekundarschule/deutsch/Fachliche_Orientierung_Deutsch.pdf",
+        "hinweis_ergaenzung": "Fachliche_Orientierung_Deutsch.pdf ist keine eigene Klassenstufe, sondern eine ergänzende fachdidaktische Orientierung; sie wird in den Klassen-Dateien als Quelle mitgenannt, wo einschlägig.",
+        "jahrgang_struktur_lehrplan": "Doppeljahrgänge 5/6 und 7/8, Einzeljahrgang 9, Doppeljahrgang 9/10",
+        "klassen_dateien": {
+          "5": "data/curriculum/deutsch/sekundarschule/klasse_05.md (Doppeljahrgang 5/6)",
+          "6": "data/curriculum/deutsch/sekundarschule/klasse_06.md (Doppeljahrgang 5/6)",
+          "7": "data/curriculum/deutsch/sekundarschule/klasse_07.md (Doppeljahrgang 7/8)",
+          "8": "data/curriculum/deutsch/sekundarschule/klasse_08.md (Doppeljahrgang 7/8)",
+          "9": "data/curriculum/deutsch/sekundarschule/klasse_09.md (Einzeljahrgang 9 bzw. Doppeljahrgang 9/10)",
+          "10": "data/curriculum/deutsch/sekundarschule/klasse_10.md (Doppeljahrgang 9/10)"
+        }
+      },
+      "Gymnasium": {
+        "quelle_pdf": "input/lehrplaene/gymnasium/deutsch/FLP_Deutsch_Gym_swd.pdf",
+        "jahrgang_struktur_lehrplan": "Doppeljahrgänge 5/6 und 7/8, Einzeljahrgang 9, Einzeljahrgang 10 (Einführungsphase), Doppeljahrgang 11/12 (Qualifikationsphase)",
+        "klassen_dateien": {
+          "9": "data/curriculum/deutsch/gymnasium/klasse_09.md",
+          "10": "data/curriculum/deutsch/gymnasium/klasse_10.md (Einführungsphase)",
+          "11": "data/curriculum/deutsch/gymnasium/klasse_11.md (Qualifikationsphase, gemeinsam mit Kl. 12)",
+          "12": "data/curriculum/deutsch/gymnasium/klasse_12.md (Qualifikationsphase, verweist auf klasse_11.md; Abiturprüfung)"
+        },
+        "gemeinschaftsschule_relevant_ab_klasse": "9",
+        "gemeinschaftsschule_nicht_relevant": "Klasse 5–8 laufen an der Gemeinschaftsschule über Sekundarschule; Gymnasium-Anteile 5–8 sind im Skill nicht als eigene Klassen-Dateien hinterlegt."
+      }
+    },
+    "Evangelische Religion": {
+      "Sekundarschule": {
+        "quelle_pdf": "input/lehrplaene/sekundarschule/religion/lp_sks_evrel_01_08_2019.pdf",
+        "jahrgang_struktur_lehrplan": "Doppeljahrgänge 5/6 und 7/8, Doppeljahrgang 9/10",
+        "klassen_dateien": {
+          "5": "data/curriculum/religion/sekundarschule/klasse_05.md (Doppeljahrgang 5/6)",
+          "6": "data/curriculum/religion/sekundarschule/klasse_06.md (Doppeljahrgang 5/6)",
+          "7": "data/curriculum/religion/sekundarschule/klasse_07.md (Doppeljahrgang 7/8)",
+          "8": "data/curriculum/religion/sekundarschule/klasse_08.md (Doppeljahrgang 7/8)",
+          "9": "data/curriculum/religion/sekundarschule/klasse_09.md (Doppeljahrgang 9/10)",
+          "10": "data/curriculum/religion/sekundarschule/klasse_10.md (Doppeljahrgang 9/10)"
+        }
+      },
+      "Gymnasium": {
+        "quelle_pdf": "input/lehrplaene/gymnasium/religion/FLP_EvangRU_Gym_01082022_swd.pdf",
+        "jahrgang_struktur_lehrplan": "Doppeljahrgänge 5/6 und 7/8, Einzeljahrgang 9, Einzeljahrgang 10 (Einführungsphase), Doppeljahrgang 11/12 (Qualifikationsphase)",
+        "klassen_dateien": {
+          "9": "data/curriculum/religion/gymnasium/klasse_09.md",
+          "10": "data/curriculum/religion/gymnasium/klasse_10.md (Einführungsphase)",
+          "11": "data/curriculum/religion/gymnasium/klasse_11.md (Qualifikationsphase, gemeinsam mit Kl. 12)",
+          "12": "data/curriculum/religion/gymnasium/klasse_12.md (Qualifikationsphase, gemeinsam mit Kl. 11)"
+        },
+        "gemeinschaftsschule_relevant_ab_klasse": "9",
+        "gemeinschaftsschule_nicht_relevant": "Klasse 5–8 laufen an der Gemeinschaftsschule über Sekundarschule; Gymnasium-Anteile 5–8 sind im Skill nicht als eigene Klassen-Dateien hinterlegt."
+      }
+    }
+  },
+  "routing": "data/curriculum/routing_rules.json",
+  "kompetenzmatrix": "data/curriculum/competency_matrix.json",
+  "nicht_abgedeckt": {
+    "katholischer_religionsunterricht": "Hinweis ausgeben: nur Evangelische Religion ist hinterlegt.",
+    "ethik": "Hinweis ausgeben: Ethik ist nicht hinterlegt.",
+    "klasse_1_bis_4": "Hinweis ausgeben: nur Klassen 5–12 sind abgedeckt.",
+    "klasse_13": "Hinweis ausgeben: Sachsen-Anhalt hat keine Klasse 13; nur Klassen 5–12 sind abgedeckt.",
+    "andere_bundeslaender": "Hinweis ausgeben: nur Sachsen-Anhalt.",
+    "andere_schulformen_gymnasium_oder_sekundarschule_rein": "Bei reiner Gymnasium- oder Sekundarschul-Anfrage ohne Gemeinschaftsschule: Routing über routing_rules.json möglich (Regeln sind nach Klassenstufen gestaffelt), aber die Skill-Beschreibung weist diesen Skill der Gemeinschaftsschule zu."
+  }
+}

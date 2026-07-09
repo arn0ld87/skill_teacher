@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0",
+  "bundesland": "Sachsen-Anhalt",
+  "school_type": "Gemeinschaftsschule",
+  "faecher": ["Deutsch", "Evangelische Religion"],
+  "hinweis_faecher": "Nur Evangelischer Religionsunterricht ist hinterlegt. Katholischer RU und Ethik liegen nicht vor und werden nicht abgedeckt.",
+  "klassen": ["5", "6", "7", "8", "9", "10", "11", "12"],
+  "lehrplanbasen": ["Sekundarschule", "Gymnasium", "kombiniert", "unklar"],
+  "rules": [
+    {
+      "grades": ["5", "6", "7", "8"],
+      "primary_curriculum": "Sekundarschule",
+      "additional_curriculum": null,
+      "requires_clarification": false,
+      "note": "Gemeinschaftsschule Klasse 5-8: Fachlehrpläne der Sekundarschule sind maßgeblich. Eine Bildungsgangtrennung findet in diesen Jahrgängen noch nicht statt."
+    },
+    {
+      "grades": ["9", "10"],
+      "primary_curriculum": "Sekundarschule",
+      "additional_curriculum": "Gymnasium",
+      "requires_clarification": true,
+      "clarification_question": "Geht es um den Sekundarschulabschluss / mittleren Schulabschluss (Basis: Sekundarschule) oder um den gymnasialen Bildungsgang (Basis: Gymnasium)?",
+      "note": "Bei gymnasialem Bildungsgang ist Klasse 10 bereits die Einführungsphase der gymnasialen Oberstufe. Ohne Angabe: Sekundarschule als sichtbar markierte Annahme, sofern kein Abitur-/Oberstufenbezug erkennbar ist.",
+      "abitur_trigger_override": "Gymnasium"
+    },
+    {
+      "grades": ["11", "12"],
+      "primary_curriculum": "Gymnasium",
+      "additional_curriculum": null,
+      "requires_clarification": false,
+      "note": "Klasse 11/12 ist die Qualifikationsphase der gymnasialen Oberstufe (Abiturbezug). Ein Sekundarschul-Bildungsgang existiert hier nicht. Der Gymnasial-Fachlehrplan führt 11 und 12 als gemeinsame Qualifikationsphase."
+    }
+  ],
+  "abitur_keywords": [
+    "Abitur", "Abiturprüfung", "Abiturklausur", "Qualifikationsphase",
+    "Einführungsphase", "Oberstufe", "Kurshalbjahr", "gymnasiale Oberstufe"
+  ],
+  "abitur_rule": "Wird eines der abitur_keywords genannt, ist der Gymnasium-Fachlehrplan zusätzlich oder primär heranzuziehen und der Abiturbezug in der Ausgabe zu kennzeichnen.",
+  "sekundarschule_endet": "10",
+  "curriculum_files": {
+    "Deutsch": {
+      "Sekundarschule": {
+        "quelle": "lp_sks_deutsch_01_08_2019_k2.pdf (+ Fachliche_Orientierung_Deutsch.pdf)",
+        "klassen": ["5", "6", "7", "8", "9", "10"],
+        "pfad": "data/curriculum/deutsch/sekundarschule/"
+      },
+      "Gymnasium": {
+        "quelle": "FLP_Deutsch_Gym_swd.pdf",
+        "klassen": ["9", "10", "11", "12"],
+        "pfad": "data/curriculum/deutsch/gymnasium/",
+        "phasen": {"10": "Einführungsphase", "11": "Qualifikationsphase", "12": "Qualifikationsphase"}
+      }
+    },
+    "Evangelische Religion": {
+      "Sekundarschule": {
+        "quelle": "lp_sks_evrel_01_08_2019.pdf",
+        "klassen": ["5", "6", "7", "8", "9", "10"],
+        "pfad": "data/curriculum/religion/sekundarschule/"
+      },
+      "Gymnasium": {
+        "quelle": "FLP_EvangRU_Gym_01082022_swd.pdf",
+        "klassen": ["9", "10", "11", "12"],
+        "pfad": "data/curriculum/religion/gymnasium/",
+        "phasen": {"10": "Einführungsphase", "11": "Qualifikationsphase", "12": "Qualifikationsphase"}
+      }
+    }
+  },
+  "fallback_verhalten": {
+    "klasse_ausserhalb_5_12": "Hinweis ausgeben: nur Klasse 5-12 abgedeckt.",
+    "fach_nicht_deutsch_oder_evrel": "Hinweis ausgeben: nur Deutsch und Evangelische Religion abgedeckt.",
+    "bildungsgang_unklar_9_10": "Rückfrage stellen oder Annahme (Sekundarschule) sichtbar markieren."
+  }
+}
